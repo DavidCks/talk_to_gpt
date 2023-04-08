@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Talk To GPT",
+  "version": "1.0",
+  "description": "This extension allows you to talk to ChatGPT on the OpenAI website (chat.openai.com)",
+  "icons": {
+    "16": "Icons/Icon-16.png",
+    "32": "Icons/Icon-32.png",
+    "48": "Icons/Icon-48.png",
+    "64": "Icons/Icon-64.png",
+    "128": "Icons/Icon-128.png",
+    "197": "Icons/Icon-197.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "src/scripts/content.js"
+      ],
+      "matches": [
+        "https://chat.openai.com/chat",
+        "https://chat.openai.com/chat/*",
+        "https://chat.openai.com/chat/*/*",
+        "https://www.chat.openai.com/chat",
+        "https://www.chat.openai.com/chat/*",
+        "https://www.chat.openai.com/chat/*/*",
+        "http://chat.openai.com/chat",
+        "http://chat.openai.com/chat/*",
+        "http://chat.openai.com/chat/*/*",
+        "http://www.chat.openai.com/chat",
+        "http://www.chat.openai.com/chat/*",
+        "http://www.chat.openai.com/chat/*/*"
+      ]
+    }
+  ]
+}
