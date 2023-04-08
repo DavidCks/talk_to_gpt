@@ -190,6 +190,8 @@ style.innerHTML = `
   .slider {
     position: absolute;
     cursor: pointer;
+    max-height: 19px;
+    max-width: calc(4.2vw + 4px);
     top: 83%;
     left: 87%;
     right: 5.5%;
@@ -220,7 +222,7 @@ style.innerHTML = `
   }
   
   input:checked + .slider:before {
-    transform: translateX(calc(200% + 5px));
+    transform: translateX(calc(2.1vw + 4px));
   }
   
   /* Rounded sliders */
