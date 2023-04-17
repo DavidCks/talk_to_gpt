@@ -14,21 +14,11 @@
   "content_scripts": [
     {
       "js": [
-        "src/scripts/content.js"
+        "src/scripts/content.js",
+        "src/scripts/vocalize.js"
       ],
       "matches": [
-        "https://chat.openai.com/chat",
-        "https://chat.openai.com/chat/*",
-        "https://chat.openai.com/chat/*/*",
-        "https://www.chat.openai.com/chat",
-        "https://www.chat.openai.com/chat/*",
-        "https://www.chat.openai.com/chat/*/*",
-        "http://chat.openai.com/chat",
-        "http://chat.openai.com/chat/*",
-        "http://chat.openai.com/chat/*/*",
-        "http://www.chat.openai.com/chat",
-        "http://www.chat.openai.com/chat/*",
-        "http://www.chat.openai.com/chat/*/*"
+        "https://chat.openai.com/*"
       ]
     }
   ]
