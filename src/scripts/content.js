@@ -15,115 +15,299 @@ viewBox="0 0 490.9 490.9" xml:space="preserve">
 </svg>`;
 
 const languageTags = [
-    'ar-SA',
-    'bn-BD',
-    'bn-IN',
-    'cs-CZ',
-    'da-DK',
-    'de-AT',
-    'de-CH',
-    'de-DE',
-    'el-GR',
-    'en-AU',
-    'en-CA',
-    'en-GB',
-    'en-IE',
-    'en-IN',
-    'en-NZ',
-    'en-US',
-    'en-ZA',
-    'es-AR',
-    'es-CL',
-    'es-CO',
-    'es-ES',
-    'es-MX',
-    'es-US',
-    'fi-FI',
-    'fr-BE',
-    'fr-CA',
-    'fr-CH',
-    'fr-FR',
-    'he-IL',
-    'hi-IN',
-    'hu-HU',
-    'id-ID',
-    'it-CH',
-    'it-IT',
-    'ja-JP',
-    'ko-KR',
-    'nl-BE',
-    'nl-NL',
-    'no-NO',
-    'pl-PL',
-    'pt-BR',
-    'pt-PT',
-    'ro-RO',
-    'ru-RU',
-    'sk-SK',
-    'sv-SE',
-    'ta-IN',
-    'ta-LK',
-    'th-TH',
-    'tr-TR',
-    'zh-CN',
-    'zh-HK',
-    'zh-TW'
+    "af-ZA",
+    "am-ET",
+    "ar-AE",
+    "ar-BH",
+    "ar-DZ",
+    "ar-EG",
+    "ar-IL",
+    "ar-IQ",
+    "ar-JO",
+    "ar-KW",
+    "ar-LB",
+    "ar-MA",
+    "ar-MR",
+    "ar-OM",
+    "ar-PS",
+    "ar-QA",
+    "ar-SA",
+    "ar-TN",
+    "ar-YE",
+    "az-AZ",
+    "bg-BG",
+    "bn-BD",
+    "bn-IN",
+    "bs-BA",
+    "ca-ES",
+    "cs-CZ",
+    "da-DK",
+    "de-AT",
+    "de-CH",
+    "de-DE",
+    "el-GR",
+    "en-AU",
+    "en-CA",
+    "en-GB",
+    "en-GH",
+    "en-HK",
+    "en-IE",
+    "en-IN",
+    "en-KE",
+    "en-NG",
+    "en-NZ",
+    "en-PH",
+    "en-PK",
+    "en-SG",
+    "en-TZ",
+    "en-US",
+    "en-ZA",
+    "es-AR",
+    "es-BO",
+    "es-CL",
+    "es-CO",
+    "es-CR",
+    "es-DO",
+    "es-EC",
+    "es-ES",
+    "es-GT",
+    "es-HN",
+    "es-MX",
+    "es-NI",
+    "es-PA",
+    "es-PE",
+    "es-PR",
+    "es-PY",
+    "es-SV",
+    "es-US",
+    "es-UY",
+    "es-VE",
+    "et-EE",
+    "eu-ES",
+    "fa-IR",
+    "fi-FI",
+    "fil-PH",
+    "fr-BE",
+    "fr-CA",
+    "fr-CH",
+    "fr-FR",
+    "gl-ES",
+    "gu-IN",
+    "hi-IN",
+    "hr-HR",
+    "hu-HU",
+    "hy-AM",
+    "id-ID",
+    "is-IS",
+    "it-CH",
+    "it-IT",
+    "iw-IL",
+    "ja-JP",
+    "jv-ID",
+    "ka-GE",
+    "kk-KZ",
+    "km-KH",
+    "kn-IN",
+    "ko-KR",
+    "lo-LA",
+    "lt-LT",
+    "lv-LV",
+    "mk-MK",
+    "ml-IN",
+    "mn-MN",
+    "mr-IN",
+    "ms-MY",
+    "my-MM",
+    "ne-NP",
+    "nl-BE",
+    "nl-NL",
+    "no-NO",
+    "pa-Guru-IN",
+    "pl-PL",
+    "pt-BR",
+    "pt-PT",
+    "ro-RO",
+    "ru-RU",
+    "rw-RW",
+    "si-LK",
+    "sk-SK",
+    "sl-SI",
+    "sq-AL",
+    "sr-RS",
+    "ss-latn-za",
+    "st-ZA",
+    "su-ID",
+    "sv-SE",
+    "sw-KE",
+    "sw-TZ",
+    "ta-IN",
+    "ta-LK",
+    "ta-MY",
+    "ta-SG",
+    "te-IN",
+    "th-TH",
+    "tn-latn-za",
+    "tr-TR",
+    "ts-ZA",
+    "uk-UA",
+    "ur-IN",
+    "ur-PK",
+    "uz-UZ",
+    "ve-ZA",
+    "vi-VN",
+    "xh-ZA",
+    "yue-Hant-HK",
+    "zh (cmn-Hans-CN)",
+    "zh-TW (cmn-Hant-TW)",
+    "zu-ZA",
 ];
 
 const languageTagsString = [
-    'Arabic (Saudi Arabia)',
-    'Bangla (Bangladesh)',
-    'Bangla (India)',
-    'Czech (Czech Republic)',
-    'Danish (Denmark)',
-    'Austrian German',
-    '"Swiss" German',
-    'Standard German (as spoken in Germany)',
-    'Modern Greek',
-    'Australian English',
-    'Canadian English',
-    'British English',
-    'Irish English',
-    'Indian English',
-    'New Zealand English', 
-    'US English', 
-    'English (South Africa)', 
-    'Argentine Spanish', 
-    'Chilean Spanish', 
-    'Colombian Spanish', 
-    'Castilian Spanish (as spoken in Central-Northern Spain)', 
-    'Mexican Spanish', 
-    'American Spanish', 
-    'Finnish (Finland)', 
-    'Belgian French', 
-    'Canadian French', 
-    '"Swiss" French', 
-    'Standard French (especially in France)', 
-    'Hebrew (Israel)', 
-    'Hindi (India)', 
-    'Hungarian (Hungary)', 
-    'Indonesian (Indonesia)', 
-    '"Swiss" Italian', 
-    'Standard Italian (as spoken in Italy)', 
-    'Japanese (Japan)', 
-    'Korean (Republic of Korea)', 
-    'Belgian Dutch', 
-    'Standard Dutch (as spoken in The Netherlands)',
-    'Norwegian (Norway)', 
-    'Polish (Poland)', 
-    'Brazilian Portuguese', 
-    'European Portuguese (as written and spoken in Portugal)', 
-    'Romanian (Romania)', 
-    'Russian (Russian Federation)', 
-    'Slovak (Slovakia)', 
-    'Swedish (Sweden)', 
-    'Indian Tamil', 
-    'Sri Lankan Tamil', 
-    'Thai (Thailand)', 
-    'Turkish (Turkey)', 
-    'Mainland China, simplified characters', 
-    'Hong Kong, traditional characters', 
-    'Taiwan, traditional characters'
+    "Afrikaans (South Africa)",
+    "Albanian (Albania)",
+    "Amharic (Ethiopia)",
+    "Arabic (Algeria)",
+    "Arabic (Bahrain)",
+    "Arabic (Egypt)",
+    "Arabic (Iraq)",
+    "Arabic (Israel)",
+    "Arabic (Jordan)",
+    "Arabic (Kuwait)",
+    "Arabic (Lebanon)",
+    "Arabic (Mauritania)",
+    "Arabic (Morocco)",
+    "Arabic (Oman)",
+    "Arabic (Qatar)",
+    "Arabic (Saudi Arabia)",
+    "Arabic (State of Palestine)",
+    "Arabic (Tunisia)",
+    "Arabic (United Arab Emirates)",
+    "Arabic (Yemen)",
+    "Armenian (Armenia)",
+    "Azerbaijani (Azerbaijan)",
+    "Basque (Spain)",
+    "Bengali (Bangladesh)",
+    "Bengali (India)",
+    "Bosnian (Bosnia and Herzegovina)",
+    "Bulgarian (Bulgaria)",
+    "Burmese (Myanmar)",
+    "Catalan (Spain)",
+    "Chinese, Cantonese (Traditional Hong Kong)",
+    "Chinese, Mandarin (Simplified, China)",
+    "Chinese, Mandarin (Traditional, Taiwan)",
+    "Croatian (Croatia)",
+    "Czech (Czech Republic)",
+    "Danish (Denmark)",
+    "Dutch (Belgium)",
+    "Dutch (Netherlands)",
+    "English (Australia)",
+    "English (Canada)",
+    "English (Ghana)",
+    "English (Hong Kong)",
+    "English (India)",
+    "English (Ireland)",
+    "English (Kenya)",
+    "English (New Zealand)",
+    "English (Nigeria)",
+    "English (Pakistan)",
+    "English (Philippines)",
+    "English (Singapore)",
+    "English (South Africa)",
+    "English (Tanzania)",
+    "English (United Kingdom)",
+    "English (United States)",
+    "Estonian (Estonia)",
+    "Filipino (Philippines)",
+    "Finnish (Finland)",
+    "French (Belgium)",
+    "French (Canada)",
+    "French (France)",
+    "French (Switzerland)",
+    "Galician (Spain)",
+    "Georgian (Georgia)",
+    "German (Austria)",
+    "German (Germany)",
+    "German (Switzerland)",
+    "Greek (Greece)",
+    "Gujarati (India)",
+    "Hebrew (Israel)",
+    "Hindi (India)",
+    "Hungarian (Hungary)",
+    "Icelandic (Iceland)",
+    "Indonesian (Indonesia)",
+    "Italian (Italy)",
+    "Italian (Switzerland)",
+    "Japanese (Japan)",
+    "Javanese (Indonesia)",
+    "Kannada (India)",
+    "Kazakh (Kazakhstan)",
+    "Khmer (Cambodia)",
+    "Kinyarwanda (Rwanda)",
+    "Korean (South Korea)",
+    "Lao (Laos)",
+    "Latvian (Latvia)",
+    "Lithuanian (Lithuania)",
+    "Macedonian (North Macedonia)",
+    "Malay (Malaysia)",
+    "Malayalam (India)",
+    "Marathi (India)",
+    "Mongolian (Mongolia)",
+    "Nepali (Nepal)",
+    "Norwegian Bokmål (Norway)",
+    "Persian (Iran)",
+    "Polish (Poland)",
+    "Portuguese (Brazil)",
+    "Portuguese (Portugal)",
+    "Punjabi (Gurmukhi India)",
+    "Romanian (Romania)",
+    "Russian (Russia)",
+    "Serbian (Serbia)",
+    "Setswana (South Africa)",
+    "Sinhala (Sri Lanka)",
+    "Slovak (Slovakia)",
+    "Slovenian (Slovenia)",
+    "Southern Sotho (South Africa)",
+    "Spanish (Argentina)",
+    "Spanish (Bolivia)",
+    "Spanish (Chile)",
+    "Spanish (Colombia)",
+    "Spanish (Costa Rica)",
+    "Spanish (Dominican Republic)",
+    "Spanish (Ecuador)",
+    "Spanish (El Salvador)",
+    "Spanish (Guatemala)",
+    "Spanish (Honduras)",
+    "Spanish (Mexico)",
+    "Spanish (Nicaragua)",
+    "Spanish (Panama)",
+    "Spanish (Paraguay)",
+    "Spanish (Peru)",
+    "Spanish (Puerto Rico)",
+    "Spanish (Spain)",
+    "Spanish (United States)",
+    "Spanish (Uruguay)",
+    "Spanish (Venezuela)",
+    "Sundanese (Indonesia)",
+    "Swahili (Kenya)",
+    "Swahili (Tanzania)",
+    "Swati (South Africa)",
+    "Swedish (Sweden)",
+    "Tamil (India)",
+    "Tamil (Malaysia)",
+    "Tamil (Singapore)",
+    "Tamil (Sri Lanka)",
+    "Telugu (India)",
+    "Thai (Thailand)",
+    "Tsonga (South Africa)",
+    "Turkish (Turkey)",
+    "Ukrainian (Ukraine)",
+    "Urdu (India)",
+    "Urdu (Pakistan)",
+    "Uzbek (Uzbekistan)",
+    "Venda (South Africa)",
+    "Vietnamese (Vietnam)",
+    "Zulu (South Africa)",
+    "isiXhosa (South Africa)",
 ];
 
 function reduceAndGetSize(element) {
@@ -137,13 +321,13 @@ function createLanguageSelect(parent) {
     // Create a select element
     const select = document.createElement("select");
     select.id = "language-select";
-    select.onchange = function(event) {
-        setting_lang = "Answer the following prompts in the corresponding language for the locale '"+ event.target.value +"' from here on out. ";
+    select.onchange = function (event) {
+        setting_lang = "Answer the following prompts in the corresponding language for the locale '" + event.target.value + "' from here on out. ";
         const selectedValue = event.target.value;
         console.log('Selected value:', selectedValue);
         micButton = document.querySelector("#mic-button");
         addMicrofoneCallbackOnClick(micButton, [createRecognizers(selectedValue)]);
-      }
+    }
 
     // Add options to the select element
     const browserLanguage = navigator.language || navigator.userLanguage;
@@ -151,7 +335,7 @@ function createLanguageSelect(parent) {
         const option = document.createElement("option");
         option.text = languageTagsString[i];
         option.value = languageTags[i];
-        if(browserLanguage == languageTags[i]) {
+        if (browserLanguage == languageTags[i]) {
             option.selected = true;
         }
         select.add(option);
@@ -264,8 +448,8 @@ function createCorrectionModeSwitch(parent) {
     label.appendChild(checkbox);
     label.appendChild(span);
     parent.appendChild(label);
-    checkbox.onchange = function(event) {
-        if(event.target.checked) {
+    checkbox.onchange = function (event) {
+        if (event.target.checked) {
             correct_mode_setting = "Correct every mistake in this prompt regarding grammar and vocabulary. ";
         } else {
             correct_mode_setting = "";
@@ -282,8 +466,8 @@ function createLanguageLevelSelect(parent) {
     // Create a select element
     const select = document.createElement("select");
     select.id = "language-level-select";
-    select.onchange = function(event) {
-        setting_lang_lvl = "Pretend to be a language teacher teaching a student at the '"+ event.target.value +"' level. ";
+    select.onchange = function (event) {
+        setting_lang_lvl = "Pretend to be a language teacher teaching a student at the '" + event.target.value + "' level. ";
         const selectedValue = event.target.value;
         console.log('Selected language level:', selectedValue);
         micButton = document.querySelector("#mic-button");
@@ -293,6 +477,9 @@ function createLanguageLevelSelect(parent) {
         const option = document.createElement("option");
         option.text = langLevels[i];
         option.value = langLevels[i];
+        if (i == langLevels.length - 2) {
+            option.selected = true;
+        }
         select.add(option);
     }
     // Add the select element to the document
@@ -366,65 +553,65 @@ function applyDebugCallbacks(recognition) {
 }
 
 let texts = {
-'ar-SA': { 'text': "", 'confidence': 0 },
-'bn-BD': { 'text': "", 'confidence': 0 },
-'bn-IN': { 'text': "", 'confidence': 0 },
-'cs-CZ': { 'text': "", 'confidence': 0 },
-'da-DK': { 'text': "", 'confidence': 0 },
-'de-AT': { 'text': "", 'confidence': 0 },
-'de-CH': { 'text': "", 'confidence': 0 },
-'de-DE': { 'text': "", 'confidence': 0 },
-'el-GR': { 'text': "", 'confidence': 0 },
-'en-AU': { 'text': "", 'confidence': 0 },
-'en-CA': { 'text': "", 'confidence': 0 },
-'en-GB': { 'text': "", 'confidence': 0 },
-'en-IE': { 'text': "", 'confidence': 0 },
-'en-IN': { 'text': "", 'confidence': 0 },
-'en-NZ': { 'text': "", 'confidence': 0 },
-'en-US': { 'text': "", 'confidence': 0 },
-'en-ZA': { 'text': "", 'confidence': 0 },
-'es-AR': { 'text': "", 'confidence': 0 },
-'es-CL': { 'text': "", 'confidence': 0 },
-'es-CO': { 'text': "", 'confidence': 0 },
-'es-ES': { 'text': "", 'confidence': 0 },
-'es-MX': { 'text': "", 'confidence': 0 },
-'es-US': { 'text': "", 'confidence': 0 },
-'fi-FI': { 'text': "", 'confidence': 0 },
-'fr-BE': { 'text': "", 'confidence': 0 },
-'fr-CA': { 'text': "", 'confidence': 0 },
-'fr-CH': { 'text': "", 'confidence': 0 },
-'fr-FR': { 'text': "", 'confidence': 0 },
-'he-IL': { 'text': "", 'confidence': 0 },
-'hi-IN': { 'text': "", 'confidence': 0 },
-'hu-HU': { 'text': "", 'confidence': 0 },
-'id-ID': { 'text': "", 'confidence': 0 },
-'it-CH': { 'text': "", 'confidence': 0 },
-'it-IT': { 'text': "", 'confidence': 0 },
-'ja-JP': { 'text': "", 'confidence': 0 },
-'ko-KR': { 'text': "", 'confidence': 0 },
-'nl-BE': { 'text': "", 'confidence': 0 },
-'nl-NL': { 'text': "", 'confidence': 0 },
-'no-NO': { 'text': "", 'confidence': 0 },
-'pl-PL': { 'text': "", 'confidence': 0 },
-'pt-BR': { 'text': "", 'confidence': 0 },
-'pt-PT': { 'text': "", 'confidence': 0 },
-'ro-RO': { 'text': "", 'confidence': 0 },
-'ru-RU': { 'text': "", 'confidence': 0 },
-'sk-SK': { 'text': "", 'confidence': 0 },
-'sv-SE': { 'text': "", 'confidence': 0 },
-'ta-IN': { 'text': "", 'confidence': 0 },
-'ta-LK': { 'text': "", 'confidence': 0 },
-'th-TH': { 'text': "", 'confidence': 0 },
-'tr-TR': { 'text': "", 'confidence': 0 },
-'zh-CN': { 'text': "", 'confidence': 0 },
-'zh-HK': { 'text': "", 'confidence': 0 },
-'zh-TW': { 'text': "", 'confidence': 0 },
+    'ar-SA': { 'text': "", 'confidence': 0 },
+    'bn-BD': { 'text': "", 'confidence': 0 },
+    'bn-IN': { 'text': "", 'confidence': 0 },
+    'cs-CZ': { 'text': "", 'confidence': 0 },
+    'da-DK': { 'text': "", 'confidence': 0 },
+    'de-AT': { 'text': "", 'confidence': 0 },
+    'de-CH': { 'text': "", 'confidence': 0 },
+    'de-DE': { 'text': "", 'confidence': 0 },
+    'el-GR': { 'text': "", 'confidence': 0 },
+    'en-AU': { 'text': "", 'confidence': 0 },
+    'en-CA': { 'text': "", 'confidence': 0 },
+    'en-GB': { 'text': "", 'confidence': 0 },
+    'en-IE': { 'text': "", 'confidence': 0 },
+    'en-IN': { 'text': "", 'confidence': 0 },
+    'en-NZ': { 'text': "", 'confidence': 0 },
+    'en-US': { 'text': "", 'confidence': 0 },
+    'en-ZA': { 'text': "", 'confidence': 0 },
+    'es-AR': { 'text': "", 'confidence': 0 },
+    'es-CL': { 'text': "", 'confidence': 0 },
+    'es-CO': { 'text': "", 'confidence': 0 },
+    'es-ES': { 'text': "", 'confidence': 0 },
+    'es-MX': { 'text': "", 'confidence': 0 },
+    'es-US': { 'text': "", 'confidence': 0 },
+    'fi-FI': { 'text': "", 'confidence': 0 },
+    'fr-BE': { 'text': "", 'confidence': 0 },
+    'fr-CA': { 'text': "", 'confidence': 0 },
+    'fr-CH': { 'text': "", 'confidence': 0 },
+    'fr-FR': { 'text': "", 'confidence': 0 },
+    'he-IL': { 'text': "", 'confidence': 0 },
+    'hi-IN': { 'text': "", 'confidence': 0 },
+    'hu-HU': { 'text': "", 'confidence': 0 },
+    'id-ID': { 'text': "", 'confidence': 0 },
+    'it-CH': { 'text': "", 'confidence': 0 },
+    'it-IT': { 'text': "", 'confidence': 0 },
+    'ja-JP': { 'text': "", 'confidence': 0 },
+    'ko-KR': { 'text': "", 'confidence': 0 },
+    'nl-BE': { 'text': "", 'confidence': 0 },
+    'nl-NL': { 'text': "", 'confidence': 0 },
+    'no-NO': { 'text': "", 'confidence': 0 },
+    'pl-PL': { 'text': "", 'confidence': 0 },
+    'pt-BR': { 'text': "", 'confidence': 0 },
+    'pt-PT': { 'text': "", 'confidence': 0 },
+    'ro-RO': { 'text': "", 'confidence': 0 },
+    'ru-RU': { 'text': "", 'confidence': 0 },
+    'sk-SK': { 'text': "", 'confidence': 0 },
+    'sv-SE': { 'text': "", 'confidence': 0 },
+    'ta-IN': { 'text': "", 'confidence': 0 },
+    'ta-LK': { 'text': "", 'confidence': 0 },
+    'th-TH': { 'text': "", 'confidence': 0 },
+    'tr-TR': { 'text': "", 'confidence': 0 },
+    'zh-CN': { 'text': "", 'confidence': 0 },
+    'zh-HK': { 'text': "", 'confidence': 0 },
+    'zh-TW': { 'text': "", 'confidence': 0 },
 }
 
 setting_lang = "";
 
 function getSettingsString() {
-    
+
     let settings = "";
     settings += setting_lang;
     settings += setting_lang_lvl;
@@ -452,7 +639,7 @@ function createRecognizers(language) {
     let SpeechRecognizer = window.SpeechRecognition || window.webkitSpeechRecognition;
     let recognition = new SpeechRecognizer();
 
-    console.log("setting language to "+ language);
+    console.log("setting language to " + language);
     // Set recognition options
     const select = document.querySelector("#language-select");
     recognition.lang = language;
@@ -466,9 +653,9 @@ function createRecognizers(language) {
         recognizedText = "";
         recognizedTextConfidence = 1;
         console.log("First Recognized results:", event.results[0]);
-        for(let i = 0; i < event.results.length; i++) {
-                recognizedText += event.results[i][0].transcript;
-                recognizedTextConfidence += event.results[i][0].confidence;
+        for (let i = 0; i < event.results.length; i++) {
+            recognizedText += event.results[i][0].transcript;
+            recognizedTextConfidence += event.results[i][0].confidence;
         }
         recognizedTextConfidence = recognizedTextConfidence / event.results.length;
         recognition = {
@@ -486,41 +673,41 @@ var isRecognizing = false;
 
 function addMicrofoneCallbackOnClick(element, recognizers) {
     navigator.mediaDevices.getUserMedia({ audio: true })
-    .then(function(stream) {
-        // Create audio context and source node
-        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        var sourceNode = audioCtx.createMediaStreamSource(stream);
-        var recognition = recognizers;
+        .then(function (stream) {
+            // Create audio context and source node
+            var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            var sourceNode = audioCtx.createMediaStreamSource(stream);
+            var recognition = recognizers;
 
-        element.onclick = function() {
-            if (!isRecognizing) {
-                element.children[0].setAttribute("fill", "red");
-                // Start recognition and connect source node
-                for (let i = 0; i < recognition.length; i++) {
-                    recognition[i].start();
-                    console.log("Started recognizer for " + recognition[i].lang);
+            element.onclick = function () {
+                if (!isRecognizing) {
+                    element.children[0].setAttribute("fill", "red");
+                    // Start recognition and connect source node
+                    for (let i = 0; i < recognition.length; i++) {
+                        recognition[i].start();
+                        console.log("Started recognizer for " + recognition[i].lang);
+                    }
+                    sourceNode.connect(audioCtx.destination);
+                    outputTarget = document.querySelector('form > div > div > textarea');
+                } else {
+                    element.children[0].setAttribute("fill", "black");
+                    // Stop recognition and disconnect source node
+                    for (let i = 0; i < recognition.length; i++) {
+                        recognition[i].stop();
+                    }
+                    sourceNode.disconnect();
                 }
-                sourceNode.connect(audioCtx.destination);
-                outputTarget = document.querySelector('form > div > div > textarea');
-            } else {
-                element.children[0].setAttribute("fill", "black");
-                // Stop recognition and disconnect source node
-                for (let i = 0; i < recognition.length; i++) {
-                    recognition[i].stop();
-                }
-                sourceNode.disconnect();
+                isRecognizing = !isRecognizing;
             }
-            isRecognizing = !isRecognizing;
-        }
-    })
-    .catch(function(err) {
-        console.log("Error accessing microphone:", err);
-    });
+        })
+        .catch(function (err) {
+            console.log("Error accessing microphone:", err);
+        });
 }
 
 function init() {
     const messageField = document.querySelector('form > div > div > textarea[placeholder]');
-    if(messageField) {
+    if (messageField) {
         const size = messageField.parentElement.offsetHeight;
         micButton = createMicButtonAtSibling(messageField.parentElement.parentElement, size);
         languageSelect = createLanguageSelect(micButton.parentElement);
@@ -528,7 +715,7 @@ function init() {
         correctModeSwitch = createCorrectionModeSwitch(micButton.parentElement);
         correctModeSwitch.style.margin = "12px";
         applyStyles(messageField.parentElement, langlvlSelect);
-        applyClasses(messageField.parentElement, langlvlSelect);4
+        applyClasses(messageField.parentElement, langlvlSelect); 4
         langlvlSelect.style.width = "22px";
         langlvlSelect.style.marginLeft = "4px";
         applyStyles(messageField.parentElement, micButton);
@@ -556,15 +743,15 @@ function checkForMicButton() {
 }
 const intervalId = setInterval(checkForMicButton, 1000); // Check every 100ms
 
-let lastUrl = location.href; 
+let lastUrl = location.href;
 new MutationObserver(() => {
-  const url = location.href;
-  if (url !== lastUrl) {
-    lastUrl = url;
-    onUrlChange();
-  }
-}).observe(document, {subtree: true, childList: true});
+    const url = location.href;
+    if (url !== lastUrl) {
+        lastUrl = url;
+        onUrlChange();
+    }
+}).observe(document, { subtree: true, childList: true });
 
 function onUrlChange() {
-  init();
+    init();
 }
