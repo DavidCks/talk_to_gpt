@@ -6,7 +6,6 @@ function getLocale(languageCode) {
 	 * @returns {string} - The corresponding locale string, e.g. "en-US" or "de-DE".
 	 */
 	languageCode = languageCode.toLowerCase();
-	console.log("locale?: ");
 	// Use Intl.DisplayNames to get the locale string from the language code
 	const locale = new Intl.Locale([languageCode], { type: 'language', language: languageCode });
 	const localeString = locale.toString() + "-US";
@@ -55,10 +54,11 @@ function stopSpeech() {
 }
 // Function to read out text in a specified language
 function readText(text, detection, newPlayButton) {
-	console.log(detection);
+	text = text.replaceAll("Stop Reading", "");
+	text = text.replaceAll("Read Aloud", "");
+	console.log("reading aloud: " + text);
 	// Create a SpeechSynthesisUtterance object
 	var utterance = new SpeechSynthesisUtterance(text);
-	console.log(utterance);
 	// Set the language for the speech
 	utterance.onend = () => {
 		newPlayButton.isReading = false;
@@ -67,7 +67,6 @@ function readText(text, detection, newPlayButton) {
 		newPlayButton.style.color = "black";
 	}
 	let lang = getLocale(detection.language);
-	console.log(lang);
 	utterance.lang = lang;
 
 	// Use the speech synthesis API to speak the text
@@ -81,7 +80,6 @@ function recognizeAndReadText(paragraph, newPlayButton) {
 			readText(paragraph.innerText, res.languages[0], newPlayButton);
 		},
 	)
-	console.log("reading aloud?????: " + paragraph.innerText);
 }
 
 function addPlayButtonToParagraphs(paragraphs) {
@@ -124,35 +122,31 @@ function addPlayButtonToParagraphs(paragraphs) {
 
 			// Append the play button and the original paragraph element to the container
 			container.appendChild(newPlayButton);
-			let clonedP = paragraph.cloneNode(true);
-			clonedP.id = "newParagraph";
-			sameContentCount = 0;
-			intervalCount = 0;
+			let lastPtext = "";
 			let newPInterval = setInterval(() => {
-				intervalCount++
-				if (clonedP.innerHTML != paragraph.innerHTML) {
-					if (intervalCount > 10) {
-						newPlayButton.textContent = newPlayButton.textContent + ".";
-						intervalCount = 0;
-					}
-					if (newPlayButton.textContent.length > newButtonBaseText.length + 3) {
-						newPlayButton.textContent = newButtonBaseText;
-					}
-					clonedP.innerHTML = paragraph.innerHTML;
-				} else {
-					sameContentCount++
-					if (sameContentCount > 100) {
-						clearInterval(newPInterval);
-						newPlayButton.style.opacity = 1;
-						newPlayButton.textContent = "Read Aloud";
-						onClick();
-					}
+				cleanParagraphtext = paragraph.innerText.replaceAll(".", "").replaceAll("Generating", "").replaceAll(" ", "");
+				if(lastPtext != "" && lastPtext == cleanParagraphtext && cleanParagraphtext.length > 2) {
+					newPlayButton.textContent = "Read Aloud";
+					newPlayButton.style.backgroundColor = "white";
+					newPlayButton.style.color = "black";
+					newPlayButton.style.opacity = 1;
+					clearInterval(newPInterval);
 				}
-			}, 30);
-			container.appendChild(clonedP); // Use cloneNode to create a deep copy of the paragraph element
+				lastPtext = cleanParagraphtext;
+				if(newPlayButton.style.opacity != 1) {
+					newPlayButton.textContent = newPlayButton.textContent + ".";
+				}
+				if (newPlayButton.textContent.length > newButtonBaseText.length + 3) {
+					newPlayButton.textContent = newButtonBaseText;
+				}
+			}, 1000);
 
 			// Replace the original paragraph element with the container in the DOM
-			paragraph.parentNode.replaceChild(container, paragraph);
+			let br = document.createElement("br");
+			let br2 = document.createElement("br");
+			paragraph.appendChild(container);
+			paragraph.appendChild(br);
+			paragraph.appendChild(br2);
 		} else {
 			//let p = paragraph.parentElement.querySelectorAll("p");
 			//p.innerHTML = paragraph.innerText;
