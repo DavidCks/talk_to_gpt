@@ -81,6 +81,7 @@ function readText(text, detection, newPlayButton, addOnEnd = true) {
 			readText(tsls[i], detection, newPlayButton, i == tsls.length - 1);
 		}
 	} else {
+		addOnEnd = true;
 		text = text.replaceAll(stopButtonText, "");
 		text = text.replaceAll(playButtonText, "");
 		// Create a SpeechSynthesisUtterance object
@@ -115,7 +116,7 @@ function readText(text, detection, newPlayButton, addOnEnd = true) {
 		// Use the speech synthesis API to speak the text
 		console.log("reading aloud ("+ lang +"): " + text);
 		window.speechSynthesis.speak(utterance);
-		}
+	}
 }
 
 function recognizeAndReadText(paragraph, newPlayButton) {

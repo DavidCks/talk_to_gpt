@@ -215,11 +215,17 @@ function createMicButtonAtSibling(element, size) {
     return micButton;
 }
 
+let tcol;
 function applyStyles(sourceElement, targetElement) {
     const styles = window.getComputedStyle(sourceElement);
 
     targetElement.style.alignItems = "center";
     targetElement.style.width = styles.width;
+    const svg = targetElement.getElementsByTagName("svg")[0];
+    if(svg) { 
+        svg.setAttribute("fill", styles.color); 
+        tcol = styles.color; 
+    }
     targetElement.style.height = styles.height;
     targetElement.style.marginTop = "8px";
     targetElement.style.marginBottom = "0";
@@ -252,7 +258,7 @@ function applyDebugCallbacks(recognition) {
     recognition.onaudioend = (event) => {
         console.log("Audio recording ended");
         element = document.querySelector("#mic-button");
-        element.children[0].setAttribute("fill", "black");
+        element.children[0].setAttribute("fill", tcol);
         isRecognizing = false;
     };
 
@@ -402,7 +408,7 @@ function addMicrofoneCallbackOnClick(element, recognizers) {
                     }
                     outputTarget = document.querySelector('form > div > div > textarea');
                 } else {
-                    element.children[0].setAttribute("fill", "black");
+                    element.children[0].setAttribute("fill", tcol);
                     // Stop recognition and disconnect source node
                     for (let i = 0; i < recognition.length; i++) {
                         recognition[i].stop();
