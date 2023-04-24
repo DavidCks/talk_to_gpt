@@ -58,11 +58,25 @@ function stopSpeech() {
 	}
 }
 
+function splitByLang(t, detection) {
+	let nt;
+	const loc = getLocale(detection.language);
+	switch (loc.split("-")[0]) {
+		case "en":
+			return t.split(".");
+		case "ja":
+		case "jp":
+			return t.split("。");
+		default:
+			return t.split(".");
+	}
+}
+
 let isCurrentlyReading = false;
 // Function to read out text in a specified language
 function readText(text, detection, newPlayButton, addOnEnd = true) {
-	if(text.length > 250) {
-		const tsls = text.split(".");
+	const tsls = splitByLang(text, detection);
+	if(tsls.length > 1) {
 		for (let i = 0; i < tsls.length; i++){
 			readText(tsls[i], detection, newPlayButton, i == tsls.length - 1);
 		}
@@ -71,6 +85,9 @@ function readText(text, detection, newPlayButton, addOnEnd = true) {
 		text = text.replaceAll(playButtonText, "");
 		// Create a SpeechSynthesisUtterance object
 		text = text.replaceAll("\n", "");
+		if(!text) {
+			return;
+		}
 		let utterance = new SpeechSynthesisUtterance(text);
 		// Set the language for the speech
 		if(addOnEnd) {
