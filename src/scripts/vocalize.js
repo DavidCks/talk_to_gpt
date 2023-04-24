@@ -1,3 +1,6 @@
+let playButtonText = "►";
+let stopButtonText = "◼"
+
 function getLocale(languageCode) {
 	/*
 	 * Converts a language code into a locale string.
@@ -24,7 +27,8 @@ function addPlaybuttonStyleToDocument() {
 		  color: black;
 		  float: left;
 		  display: inline-block;
-		  padding: 5px;
+		  padding-left: 2px;
+		  padding-right: 2px;
 		  margin: 5px;
 		  margin-right: 15px;
 		  background-color: #fff;
@@ -54,15 +58,15 @@ function stopSpeech() {
 }
 // Function to read out text in a specified language
 function readText(text, detection, newPlayButton) {
-	text = text.replaceAll("Stop Reading", "");
-	text = text.replaceAll("Read Aloud", "");
+	text = text.replaceAll(stopButtonText, "");
+	text = text.replaceAll(playButtonText, "");
 	console.log("reading aloud: " + text);
 	// Create a SpeechSynthesisUtterance object
 	var utterance = new SpeechSynthesisUtterance(text);
 	// Set the language for the speech
 	utterance.onend = () => {
 		newPlayButton.isReading = false;
-		newPlayButton.textContent = "Read Aloud";
+		newPlayButton.textContent = playButtonText;
 		newPlayButton.style.backgroundColor = "white";
 		newPlayButton.style.color = "black";
 	}
@@ -94,26 +98,27 @@ function addPlayButtonToParagraphs(paragraphs) {
 		if (!playButton && !parentHasContainerClass) {
 			// If not, create a new "play" button element
 			const newPlayButton = document.createElement('button');
-			let newButtonBaseText = "Generating"
+			let newButtonBaseText = "."
 			newPlayButton.textContent = newButtonBaseText; // Set the text content of the button to "Play"
 			newPlayButton.style.maxWidth = newPlayButton.style.width;
 			newPlayButton.classList.add('play-button'); // Add a class to the button for styling
 			newPlayButton.isReading = false
 			let onClick = () => {
 				if (!newPlayButton.isReading) {
-					newPlayButton.textContent = "Stop Reading";
+					newPlayButton.textContent = stopButtonText;
 					newPlayButton.style.backgroundColor = "black";
 					newPlayButton.style.color = "white";
 					recognizeAndReadText(paragraph, newPlayButton);
 				} else {
 					stopSpeech();
-					newPlayButton.textContent = "Read Aloud";
+					newPlayButton.textContent = playButtonText;
 					newPlayButton.style.backgroundColor = "white";
 					newPlayButton.style.color = "black";
 				}
 				newPlayButton.isReading = !newPlayButton.isReading;
 			}
 			newPlayButton.addEventListener('click', onClick);
+			newPlayButton.style.userSelect = 'none';
 			newPlayButton.style.opacity = 0.5;
 
 			// Create a container element to hold the paragraph and the play button
@@ -126,7 +131,7 @@ function addPlayButtonToParagraphs(paragraphs) {
 			let newPInterval = setInterval(() => {
 				cleanParagraphtext = paragraph.innerText.replaceAll(".", "").replaceAll("Generating", "").replaceAll(" ", "");
 				if(lastPtext != "" && lastPtext == cleanParagraphtext && cleanParagraphtext.length > 2) {
-					newPlayButton.textContent = "Read Aloud";
+					newPlayButton.textContent = playButtonText;
 					newPlayButton.style.backgroundColor = "white";
 					newPlayButton.style.color = "black";
 					newPlayButton.style.opacity = 1;

@@ -400,7 +400,6 @@ function addMicrofoneCallbackOnClick(element, recognizers) {
                         recognition[i].start();
                         console.log("Started recognizer for " + recognition[i].lang);
                     }
-                    sourceNode.connect(audioCtx.destination);
                     outputTarget = document.querySelector('form > div > div > textarea');
                 } else {
                     element.children[0].setAttribute("fill", "black");
@@ -408,7 +407,6 @@ function addMicrofoneCallbackOnClick(element, recognizers) {
                     for (let i = 0; i < recognition.length; i++) {
                         recognition[i].stop();
                     }
-                    sourceNode.disconnect();
                 }
                 isRecognizing = !isRecognizing;
             }
